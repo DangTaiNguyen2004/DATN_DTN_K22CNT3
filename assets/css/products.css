@@ -1,0 +1,183 @@
+/* ===== RESET & BODY ===== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0e1116;        /* nền đen dịu */
+    color: #e6e6e6;             /* chữ sáng */
+}
+
+/* ===== LINK ===== */
+a {
+    color: #5da9ff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CONTAINER ===== */
+.admin-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #161b22;        /* nền khối */
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* ===== TITLE ===== */
+.admin-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* ===== BUTTON ADD ===== */
+.btn-add {
+    display: inline-block;
+    background: #2ecc71;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.btn-add:hover {
+    background: #27ae60;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f141a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: #1f2630;
+}
+
+th {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #2a3038;
+    text-align: left;
+    color: #e6e6e6;
+}
+
+/* hover row */
+tbody tr:hover {
+    background: #1a2029;
+}
+
+/* ===== IMAGE ===== */
+td img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #000;
+}
+
+/* ===== ACTION ICON ===== */
+.action a {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.action .edit {
+    color: #f1c40f;
+}
+.action .edit:hover {
+    color: #ffd65a;
+}
+
+.action .delete {
+    color: #e74c3c;
+}
+.action .delete:hover {
+    color: #ff6b61;
+}
+
+/* ===== FORM ADMIN ===== */
+.admin-form {
+    max-width: 500px;
+    background: #161b22;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+.admin-form label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #f0f0f0;
+}
+
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    padding: 11px;
+    background: #0f141a;
+    border: 1px solid #2a3038;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.admin-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.admin-form input::placeholder,
+.admin-form textarea::placeholder {
+    color: #888;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    outline: none;
+    border-color: #5da9ff;
+    box-shadow: 0 0 0 2px rgba(93,169,255,0.2);
+}
+
+/* ===== BUTTON FORM ===== */
+.admin-form button {
+    margin-top: 22px;
+    padding: 12px;
+    width: 100%;
+    background: #2ecc71;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-form button:hover {
+    background: #27ae60;
+}
+
+/* ===== IMAGE PREVIEW ===== */
+.preview-img {
+    margin: 12px 0;
+}
+
+.preview-img img {
+    width: 160px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
