@@ -2,8 +2,15 @@
 include "config/db.php";
 include "inc/header.php";
 
+/* FIX lỗi */
+$keyword = $_GET['keyword'] ?? '';
+
 $products = $conn->query("SELECT * FROM products")->fetchAll();
 ?>
+
+<?php if($keyword): ?>
+  <h5>Kết quả tìm kiếm cho: "<b><?= htmlspecialchars($keyword) ?></b>"</h5>
+<?php endif; ?>
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -15,13 +22,9 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
-
-
   <!-- Giới thiệu -->
   <section class="intro">
-    <div class="container">
+    <div class="intro-container">
       <h2>THÀNH LẬP & PHÁT TRIỂN</h2>
       <div class="content">
         <img src="https://noithathpro.com/uploads/hoan-thien-noi-that-nha-anh-hoang-2.jpg" alt="Phòng khách">

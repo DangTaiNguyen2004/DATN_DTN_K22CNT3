@@ -9,18 +9,12 @@ body {
   color: #333;
 }
 /* --- HEADER CHUNG --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
+
 
 /* Header */
 header {
   width: 100%;
   background: #fff;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
@@ -57,33 +51,7 @@ nav a.active {
 }
 
 /* Banner */
-.banner {
-  position: relative;
-}
 
-.banner img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-}
-
-.banner-text img {
-  height: 90px;
-}
-
-.banner-text h1 {
-  font-size: 36px;
-  font-weight: 700;
-}
 
 /* Nội dung */
 .intro {
@@ -91,13 +59,11 @@ nav a.active {
   padding: 60px 0;
 }
 
-.container {
+.intro-container {
   width: 80%;
   margin: auto;
   background: #fff;
   padding: 40px 60px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .container h2 {
@@ -110,8 +76,7 @@ nav a.active {
 
 .content {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .content.reverse {

@@ -9,12 +9,7 @@ body {
   color: #333;
 }
 /* --- HEADER CHUNG --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
+
 
 /* Header */
 header {
@@ -91,7 +86,9 @@ nav a.active {
   padding: 60px 0;
 }
 
-.container {
+/* đổi từ .container -> .main-container */
+/* đổi từ .container -> .main-container */
+.main-container {
   width: 80%;
   margin: auto;
   background: #fff;
@@ -157,16 +154,12 @@ nav a.active {
 }
 /* Footer */
 footer {
-  background: #222;
-  color: #ddd;
-  padding: 40px 80px 20px;
-  margin-top: 60px;
+  width: 100%;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-content h4 {

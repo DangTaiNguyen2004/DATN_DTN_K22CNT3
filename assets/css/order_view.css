@@ -1,0 +1,98 @@
+/* ===== BACKGROUND ===== */
+body {
+    background: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+.order-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== HEADER ===== */
+.order-header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.order-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.order-info {
+    margin-top: 10px;
+    color: #555;
+}
+
+/* ===== TABLE ===== */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* HEADER */
+.order-table thead {
+    background: linear-gradient(135deg, #2f3542);
+    color: white;
+}
+
+.order-table th {
+    padding: 14px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* BODY */
+.order-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* ROW HOVER */
+.order-table tbody tr:hover {
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+/* PRICE */
+.price {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* COLOR DOT */
+.color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background: #333;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #000;
+}

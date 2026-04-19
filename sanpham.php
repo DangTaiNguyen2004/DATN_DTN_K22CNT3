@@ -4,9 +4,25 @@ include "inc/header.php";
 
 $products = $conn->query("SELECT * FROM products")->fetchAll();
 ?>
+<link rel="stylesheet" href="assets/css/wrapper.css">
 <link rel="stylesheet" href="assets/css/categories.css">
 <link rel="stylesheet" href="assets/css/doitac.css">
+<form action="search.php" method="GET" class="search-form">
+    <div class="search-box">
+        <input 
+            type="text" 
+            name="keyword" 
+            id="searchInput"
+            placeholder="Nhập tên sản phẩm..."
+            autocomplete="off"
+            required
+        >
+        <button type="submit">🔍</button>
+    </div>
 
+    <!-- dropdown gợi ý -->
+    <div id="suggestBox"></div>
+</form>
 <h3 class="mb-4">Sản phẩm </h3>
 <main>
 <div class="row">
@@ -29,3 +45,4 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
   
 
 <?php include "inc/footer.php"; ?>
+<script src="assets/js/search.js"></script>

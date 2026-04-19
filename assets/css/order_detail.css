@@ -1,0 +1,28 @@
+/* reset chuẩn */
+body {
+    margin: 0;
+}
+
+/* layout full màn hình */
+.admin-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* sidebar giữ nguyên */
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+/* content kéo full */
+.admin-content {
+    flex: 1;
+    padding: 30px;
+    background: #f1f2f6;
+    width: calc(100% - 220px);
+}
+.admin-table {
+    width: 100% ;
+}

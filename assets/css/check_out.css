@@ -1,0 +1,36 @@
+.checkout-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.checkout-form h3 {
+  margin-top: 15px;
+  color: #333;
+}
+
+.checkout-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.checkout-form label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.checkout-form button {
+  width: 100%;
+  padding: 12px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+}

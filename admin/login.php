@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
     if ($user) {
         if ($user['role'] === 'admin') {
             $_SESSION['admin'] = $user;
-            header("Location: products.php"); // admin
+            header("Location: index.php"); // admin
         } else {
             $_SESSION['user'] = $user;
             header("Location: ../index.php"); // web bán hàng

@@ -2,39 +2,111 @@
 include "config/db.php";
 include "inc/header.php";
 
-$products = $conn->query("SELECT * FROM products")->fetchAll();
-?>
-<link rel="stylesheet" href="assets/css/categories.css">
-<link rel="stylesheet" href="assets/css/doitac.css">
-<section class="categories">
-    <div class="cat-item"><img src="assets/images/products/sofa2.jpg"><p>Phòng khách</p></div>
-    <div class="cat-item"><img src="assets/images/products/giuong2.jpg"><p>Phòng ngủ</p></div>
-    <div class="cat-item"><img src="assets/images/products/ban2.jpg"><p>Phòng bếp</p></div>
-    <div class="cat-item"><img src="assets/images/products/nhatam.jpg"><p>Phòng tắm</p></div>
-    <div class="cat-item"><img src="assets/images/products/treem.jpg"><p>Trẻ em</p></div>
-    <div class="cat-item"><img src="assets/images/products/vanphong.jpg"><p>Văn phòng</p></div>
-    <div class="cat-item"><img src="assets/images/products/ban2.jpg"><p>Cầu thang</p></div>
-    <div class="cat-item"><img src="assets/images/products/ban2.jpg"><p>Đồ trang trí</p></div>
-  </section>
-<h3 class="mb-4">Sản phẩm nổi bật</h3>
+$keyword = $_GET['keyword'] ?? '';
 
-<div class="row">
-<?php foreach($products as $p): ?>
-  <div class="col-md-3 mb-4">
-    <div class="card h-100">
-      <img src="assets/images/products/<?= $p['image'] ?>" class="card-img-top">
-      <div class="card-body text-center">
-        <h6><?= $p['name'] ?></h6>
-        <p class="text-danger fw-bold"><?= number_format($p['price']) ?> đ</p>
-        <a href="product.php?id=<?= $p['id'] ?>" class="btn btn-outline-dark btn-sm">
-          Xem chi tiết
-        </a>
-     
-      </div>
+if ($keyword) {
+    $stmt = $conn->prepare("SELECT * FROM products WHERE name LIKE ?");
+    $stmt->execute(["%$keyword%"]);
+    $products = $stmt->fetchAll();
+} else {
+    $products = $conn->query("SELECT * FROM products")->fetchAll();
+}
+$stmt = $conn->query("
+    SELECT p.* 
+    FROM featured_products f
+    JOIN products p ON f.product_id = p.id
+    ORDER BY f.id DESC
+");
+
+$products = $stmt->fetchAll();
+?>
+<?php if($keyword): ?>
+  <h5>Kết quả tìm kiếm cho: "<b><?= htmlspecialchars($keyword) ?></b>"</h5>
+<?php endif; ?>
+<?php
+$cats = $conn->query("SELECT * FROM categories")->fetchAll();
+?>
+<link rel="stylesheet" href="assets/css/featured.css">
+<link rel="stylesheet" href="assets/css/categories.css">
+<link rel="stylesheet" href="assets/css/wrapper.css">
+<link rel="stylesheet" href="assets/css/doitac.css">
+<form action="search.php" method="GET" class="search-form">
+    <div class="search-box">
+        <input 
+            type="text" 
+            name="keyword" 
+            id="searchInput"
+            placeholder="Nhập tên sản phẩm..."
+            autocomplete="off"
+            required
+        >
+        <button type="submit">Tìm kiếm</button>
     </div>
-  </div>
+
+    <!-- dropdown gợi ý -->
+    <div id="suggestBox"></div>
+</form>
+<div class="wrapper">
+        <marquee id="slider" scrollamount="14" direction="left">
+            <div class="images" id="imgBox">
+                <h1>NỘI THẤT DTN HOME được xây dựng dựa trên tình yêu, đam mê cái đẹp với nghề mộc và khát khao mang những sản phẩm nội thất đẹp của mình đến với khách hàng thân yêu.</h1>
+                <img src="https://noithathpro.com/uploads/hoan-thien-noi-that-nha-anh-hoang-2.jpg" alt="" class="img">
+                <img src="https://noithatnabi.com/wp-content/uploads/2019/02/banner-nabi-slide-03-1900x700.jpg" alt="" class="img">
+                <img src="https://noithat.mangvinhphuc.com/wp-content/uploads/2024/12/thiet-ke-thi-cong-noi-that-vinhphuc-banner8.jpg" alt="" class="img">
+                <img src="https://bighome.vn/wp-content/uploads/2023/01/Banner-anh-Long.jpg" alt="" class="img">
+            </div>
+        </marquee>
+    </div>
+    
+    <h2>DANH MỤC SẢN PHẨM</h2>
+<section class="categories">
+<?php foreach($cats as $c): ?>
+  <a href="category.php?id=<?= $c['id'] ?>" class="cat-item">
+    
+    <div class="icon-box">
+      <img src="/noithat_ngocquangggg/assets/images/icon/<?= $c['icon'] ?>">
+    </div>
+
+    <p><?= $c['name'] ?></p>
+
+  </a>
 <?php endforeach; ?>
+</section>
+<div class="container py-5">
+
+    <h2 class="title">🔥 SẢN PHẨM NỔI BẬT</h2>
+
+    <div class="product-grid">
+        <?php foreach($products as $p): ?>
+        <div class="product-card">
+
+            <div class="product-img">
+                <img src="assets/images/products/<?= $p['image'] ?>" alt="">
+                <span class="badge-hot">HOT</span>
+            </div>
+
+            <div class="product-body">
+                <h4><?= $p['name'] ?></h4>
+
+                <p class="price"><?= number_format($p['price']) ?> đ</p>
+
+                <div class="actions">
+                    <a href="product.php?id=<?= $p['id'] ?>" class="btn-view">
+                        Xem chi tiết
+                    </a>
+
+                    <a href="add_to_cart.php?id=<?= $p['id'] ?>" class="btn-cart">
+                        🛒
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <?php endforeach; ?>
+    </div>
+
 </div>
+
  <section class="page-header">
   <h1 class="page-title">Tin Tức </h1>
 </section>
@@ -44,7 +116,7 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
       <div class="content">
         <img src="https://noithathpro.com/uploads/hoan-thien-noi-that-nha-anh-hoang-2.jpg" alt="Phòng khách">
         <p>
-          NỘI THẤT Hoàng Hoan được xây dựng dựa trên tình yêu, đam mê cái đẹp với nghề mộc và khát khao mang những sản phẩm nội thất đẹp của mình đến với khách hàng thân yêu. <br><br>
+          NỘI THẤT DTN HOME được xây dựng dựa trên tình yêu, đam mê cái đẹp với nghề mộc và khát khao mang những sản phẩm nội thất đẹp của mình đến với khách hàng thân yêu. <br><br>
           Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. Hoàng Hoan luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.
         </p>
       </div>
@@ -80,6 +152,7 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
 
   </section>
    <section class="page-header">
+    
   <h1 class="page-title">Đối Tác </h1>
 </section>
     <main class="partners">
@@ -139,5 +212,65 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
     </div>
   </main>
   
+<?php
+
+
+$success = "";
+
+if(isset($_POST['send'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+
+    $stmt = $conn->prepare("
+        INSERT INTO contacts(name,email,phone,message)
+        VALUES(?,?,?,?)
+    ");
+    $stmt->execute([$name,$email,$phone,$message]);
+
+    $success = "Gửi liên hệ thành công!";
+}
+?>
+
+<link rel="stylesheet" href="assets/css/lienhe.css">
+
+<!-- BANNER -->
+<section class="contact-banner">
+    <h1>LIÊN HỆ</h1>
+</section>
+
+<div class="contact-box container">
+
+    <div class="row align-items-center">
+
+        <!-- LEFT IMAGE -->
+        <div class="col-md-6 text-center">
+            <img src="https://noithathpro.com/uploads/hoan-thien-noi-that-nha-anh-hoang-2.jpg" class="img-fluid">
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="col-md-6">
+            <h3>LIÊN HỆ VỚI CHÚNG TÔI</h3>
+
+            <?php if($success): ?>
+                <div class="alert alert-success"><?= $success ?></div>
+            <?php endif; ?>
+
+            <form method="post">
+                <input type="text" name="name" placeholder="Họ tên" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="phone" placeholder="Số điện thoại">
+                <textarea name="message" placeholder="Nội dung" required></textarea>
+
+                <button name="send">Gửi</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
 
 <?php include "inc/footer.php"; ?>
+<script src="assets/js/search.js"></script>

@@ -1,0 +1,58 @@
+.admin-wrapper {
+    display: flex;
+}
+
+/* nội dung */
+.admin-content {
+    flex: 1;
+    padding: 30px;
+    background: #0f172a;
+    min-height: 100vh;
+}
+
+/* card */
+.admin-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+/* bảng */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* header */
+.admin-table thead {
+    background: #334155;
+}
+
+/* ô */
+.admin-table th,
+.admin-table td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    font-size: 14px;
+}
+
+/* hover */
+.admin-table tr:hover {
+    background: #1e293b;
+}
+
+/* nội dung dài */
+.msg {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* nút xóa */
+.btn-delete {
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 16px;
+}

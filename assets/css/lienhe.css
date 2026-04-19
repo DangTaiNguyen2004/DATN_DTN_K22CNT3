@@ -1,0 +1,57 @@
+body {
+    background: #f5f5f5;
+}
+
+/* ===== BANNER ===== */
+.contact-banner {
+    background: url("https://noithathpro.com/uploads/hoan-thien-noi-that-nha-anh-hoang-4.jpg") center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-banner h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* ===== BOX ===== */
+.contact-box {
+    background: #fff;
+    margin-top: -80px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* ===== FORM ===== */
+.contact-box h3 {
+    color: #b18457;
+    margin-bottom: 20px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #b18457;
+    outline: none;
+}
+
+.contact-box textarea {
+    height: 100px;
+}
+
+.contact-box button {
+    background: #b18457;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+}
+
+.contact-box button:hover {
+    background: #8c6239;
+}

@@ -14,47 +14,62 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
 
   <table class="table text-white">
     <thead>
-      <tr>
-        <th>Tên</th>
-        <th>Giá</th>
-        <th>Số lượng</th>
-        <th>Thành tiền</th>
-        <th>Xóa</th>
-      </tr>
-    </thead>
+  <tr>
+    <th>Tên</th>
+    <th>Màu</th>
+    <th>Loại gỗ</th>
+    <th>Giá</th>
+    <th>Số lượng</th>
+    <th>Thành tiền</th>
+    <th>Xóa</th>
+  </tr>
+</thead>
 
     <tbody>
-    <?php
-      $total = 0;
-      foreach ($_SESSION['cart'] as $id => $item):
-        $subtotal = $item['price'] * $item['qty'];
-        $total += $subtotal;
-    ?>
-      <tr>
-        <td><?= $item['name'] ?></td>
+<?php
+  $total = 0;
+  foreach ($_SESSION['cart'] as $id => $item):
+    $subtotal = $item['price'] * $item['qty'];
+    $total += $subtotal;
+?>
+<tr>
+  <td><?= $item['name'] ?></td>
 
-        <td><?= number_format($item['price']) ?> đ</td>
+  <!-- MÀU -->
+  <td>
+    <span style="
+      display:inline-block;
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      background:<?= $item['color'] ?>;
+      border:1px solid #ccc;
+    "></span>
+  </td>
 
-        <td>
-          <a href="update_cart.php?id=<?= $id ?>&action=minus">➖</a>
-          <strong><?= $item['qty'] ?></strong>
-          <a href="update_cart.php?id=<?= $id ?>&action=plus">➕</a>
-        </td>
+  <!-- GỖ -->
+  <td><?= $item['wood'] ?></td>
 
-        <td><?= number_format($subtotal) ?> đ</td>
+  <td><?= number_format($item['price']) ?> đ</td>
 
-        <td>
-          <a
-            href="update_cart.php?id=<?= $id ?>&action=remove"
-            onclick="return confirm('Xóa sản phẩm này?')"
-            style="color:red;font-weight:bold"
-          >
-            ❌
-          </a>
-        </td>
-      </tr>
-    <?php endforeach; ?>
-    </tbody>
+  <td>
+    <a href="update_cart.php?id=<?= $id ?>&action=minus">➖</a>
+    <strong><?= $item['qty'] ?></strong>
+    <a href="update_cart.php?id=<?= $id ?>&action=plus">➕</a>
+  </td>
+
+  <td><?= number_format($subtotal) ?> đ</td>
+
+  <td>
+    <a href="update_cart.php?id=<?= $id ?>&action=remove"
+       onclick="return confirm('Xóa sản phẩm này?')"
+       style="color:red;font-weight:bold">
+       ❌
+    </a>
+  </td>
+</tr>
+<?php endforeach; ?>
+</tbody>
 
     <tfoot>
       <tr>

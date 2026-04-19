@@ -3,18 +3,24 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+if (!isset($conn)) {
+    include __DIR__ . "/../config/db.php";
+}
+$company = $conn->query("SELECT * FROM company_info LIMIT 1")->fetch();
 ?>
+
+
 <link rel="stylesheet" href="assets/css/footer.css">
 <footer>
     <div class="footer-content">
       <div class="info">
         <h4>THÔNG TIN CHUNG</h4>
-        <p><strong>CÔNG TY TNHH HOÀNG HOAN</strong></p>
-        <p>📞 0999.999.999</p>
-        <p>✉️ cskh@hoanghoan.vn</p>
-        <p>📍 Số 1 Nguyễn Trãi, Thanh Xuân, Hà Nội</p>
+        <p><strong><?= $company['name'] ?? 'CÔNG TY TNHH HOÀNG HOAN' ?></strong></p>
+        <p>📞 <?= $company['phone'] ?? '0999.999.999' ?></p>
+        <p>✉️ <?= $company['email'] ?? 'cskh@hoanghoan.vn' ?></p>
+        <p>📍 <?= $company['address'] ?? 'Số 1 Nguyễn Trãi, Thanh Xuân, Hà Nội' ?></p>
       </div>
-
+ 
       <div class="about">
         <h4>VỀ CHÚNG TÔI</h4>
         <ul>

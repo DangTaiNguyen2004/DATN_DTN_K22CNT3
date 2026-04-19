@@ -2,9 +2,34 @@
 include "config/db.php";
 include "inc/header.php";
 
+/* FIX lỗi */
+$keyword = $_GET['keyword'] ?? '';
+
 $products = $conn->query("SELECT * FROM products")->fetchAll();
 ?>
 
+<?php if($keyword): ?>
+  <h5>Kết quả tìm kiếm cho: "<b><?= htmlspecialchars($keyword) ?></b>"</h5>
+<?php endif; ?>
+<link rel="stylesheet" href="assets/css/wrapper.css">
+<link rel="stylesheet" href="assets/css/categories.css">
+<link rel="stylesheet" href="assets/css/doitac.css">
+<form action="search.php" method="GET" class="search-form">
+    <div class="search-box">
+        <input 
+            type="text" 
+            name="keyword" 
+            id="searchInput"
+            placeholder="Nhập tên sản phẩm..."
+            autocomplete="off"
+            required
+        >
+        <button type="submit">🔍</button>
+    </div>
+
+    <!-- dropdown gợi ý -->
+    <div id="suggestBox"></div>
+</form>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -80,3 +105,4 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
 </body>
 </html>
 <?php include "inc/footer.php"; ?>
+<script src="assets/js/search.js"></script>

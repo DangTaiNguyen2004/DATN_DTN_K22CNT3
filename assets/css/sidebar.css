@@ -1,0 +1,44 @@
+/* layout ngang */
+.admin-wrapper {
+    display: flex;
+}
+
+/* sidebar */
+.sidebar {
+    width: 220px;
+    min-height: 100vh;
+    background: #2f3542;
+    color: white;
+    padding: 20px;
+}
+
+/* content bên phải */
+.admin-container {
+    flex: 1;
+    opacity: 1;
+    padding: 30px;
+    background: #2f3542;
+}
+
+.sidebar h4 {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: #ccc;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: #57606f;
+    color: white;
+}
+
+.sidebar .logout {
+    margin-top: 20px;
+    color: #ff6b6b;
+}
