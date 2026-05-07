@@ -1,0 +1,106 @@
+/* ===== FOOTER NEW (KHÔNG TRÙNG CLASS) ===== */
+.ft-new {
+    width: 100%;
+    background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+    color: #ccc;
+    padding: 50px 0 20px;
+}
+
+/* container */
+.ft-new-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* title */
+.ft-new h4 {
+    color: #e0a800;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* text */
+.ft-new p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+.ft-name {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* link */
+.ft-new a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.ft-new a:hover {
+    color: #e0a800;
+}
+
+/* list */
+.ft-new ul {
+    padding-left: 18px;
+}
+
+.ft-new li {
+    margin-bottom: 6px;
+}
+
+/* icon */
+.ft-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.ft-icons img {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.ft-icons img:hover {
+    transform: scale(1.15);
+}
+
+/* badge */
+.ft-badge {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a73e8;
+    padding: 6px 10px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.ft-badge img {
+    width: 20px;
+}
+
+.ft-badge span {
+    color: #fff;
+    font-size: 12px;
+}
+
+/* copyright */
+.ft-copy {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 12px;
+    font-size: 13px;
+    color: #aaa;
+}

@@ -37,6 +37,7 @@ $totalContacts = $conn->query("SELECT COUNT(*) FROM contacts")->fetchColumn();
 <a href="contacts.php">📨 Liên hệ</a>
 <a href="company.php">🏢 Công ty</a>
 <a href="news.php">📰 Tin tức</a>
+<a href="reviews.php">⭐Trả lời đánh giá</a>
 <a href="logout.php" class="logout">🚪 Đăng xuất</a>
     </div>
 

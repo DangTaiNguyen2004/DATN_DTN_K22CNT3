@@ -104,5 +104,5 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
 
 </body>
 </html>
-<?php include "inc/footer.php"; ?>
+<?php include "inc/footer_new.php"; ?>
 <script src="assets/js/search.js"></script>

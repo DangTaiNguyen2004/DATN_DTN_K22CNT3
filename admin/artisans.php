@@ -76,6 +76,7 @@ $artisans = $conn->query("SELECT * FROM artisans ORDER BY id DESC")->fetchAll();
 
         <a href="index.php">📊 Bảng điều khiển</a>
 <a href="products.php">📦 Sản phẩm</a>
+<a href="featured_add.php">📦 Sản phẩm nổi bật</a>
 <a href="order_detail.php">🧾 Đơn hàng</a>
 <a href="users.php">👤 Người dùng</a>
 <a href="banners.php">🖼 Banner</a>
@@ -83,6 +84,7 @@ $artisans = $conn->query("SELECT * FROM artisans ORDER BY id DESC")->fetchAll();
 <a href="contacts.php">📨 Liên hệ</a>
 <a href="company.php">🏢 Công ty</a>
 <a href="news.php">📰 Tin tức</a>
+<a href="reviews.php">⭐ Trả lời đánh giá</a>
 <a href="logout.php" class="logout">🚪 Đăng xuất</a>
     </div>
 

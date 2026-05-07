@@ -1,0 +1,23 @@
+.review-box{
+    background:#f8f8f8;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+}
+
+.stars{
+    color:gold;
+    margin:5px 0;
+}
+
+.review-form{
+    margin-top:15px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.review-form textarea{
+    height:80px;
+    padding:8px;
+}

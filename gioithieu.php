@@ -17,7 +17,7 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới thiệu - Hoàng Hoan</title>
+  <title>Giới thiệu - DTN HOME</title>
   <link rel="stylesheet" href="assets/css/gioithieu.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -29,8 +29,8 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
       <div class="content">
         <img src="https://noithathpro.com/uploads/hoan-thien-noi-that-nha-anh-hoang-2.jpg" alt="Phòng khách">
         <p>
-          NỘI THẤT Hoàng Hoan được xây dựng dựa trên tình yêu, đam mê cái đẹp với nghề mộc và khát khao mang những sản phẩm nội thất đẹp của mình đến với khách hàng thân yêu. <br><br>
-          Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. Hoàng Hoan luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.
+          NỘI THẤT DTN HOME được xây dựng dựa trên tình yêu, đam mê cái đẹp với nghề mộc và khát khao mang những sản phẩm nội thất đẹp của mình đến với khách hàng thân yêu. <br><br>
+          Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. DTN HOME luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.
         </p>
       </div>
 
@@ -38,7 +38,7 @@ $products = $conn->query("SELECT * FROM products")->fetchAll();
       <div class="content reverse">
         <img src="https://noithathpro.com/uploads/hoan-thien-noi-that-nha-anh-hoang.jpg" alt="Tầm nhìn">
         <p>
-          Chúng tôi luôn hướng đến việc tạo ra các sản phẩm nội thất tiện nghi, hiện đại và tinh tế. Với đội ngũ thiết kế sáng tạo và thợ mộc lành nghề, Hoàng Hoan không chỉ mang đến sản phẩm chất lượng mà còn khẳng định phong cách sống đẳng cấp cho mỗi khách hàng,Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. Hoàng Hoan luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.<br>Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. Hoàng Hoan luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. Hoàng Hoan luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.
+          Chúng tôi luôn hướng đến việc tạo ra các sản phẩm nội thất tiện nghi, hiện đại và tinh tế. Với đội ngũ thiết kế sáng tạo và thợ mộc lành nghề, DTN HOME không chỉ mang đến sản phẩm chất lượng mà còn khẳng định phong cách sống đẳng cấp cho mỗi khách hàng,Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. DTN HOME luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.<br>Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. DTN HOME luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.Cả tập thể luôn nỗ lực không ngừng để chỉnh chu từ khâu thiết kế, sản xuất đến thi công, với mục tiêu mang lại không gian sống lý tưởng cho mọi gia đình. DTN HOME luôn hướng đến sự sáng tạo, thẩm mỹ và sự hài lòng của khách hàng là niềm tự hào nhất.
         </p>
       </div>
 

@@ -31,7 +31,7 @@ if (isset($_POST['login'])) {
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Đăng nhập | Nội Thất Ngọc Quang</title>
+<title>Đăng nhập | Nội Thất DTN HOME</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="../assets/css/admin.css">
@@ -43,7 +43,7 @@ if (isset($_POST['login'])) {
 
   <div class="login-left">
     <div class="brand">
-      <h1>Nội Thất Ngọc Quang</h1>
+      <h1>Nội Thất DTN HOME</h1>
       <p>Sự lựa chọn số 1 trong lòng người Việt</p>
     </div>
   </div>
@@ -64,7 +64,7 @@ if (isset($_POST['login'])) {
       <a class="btn-add" href="dangki.php">Đăng ký</a>
 
       <div class="login-footer">
-        © 2026 Nội Thất Ngọc Quang
+        © 2026 Nội Thất DTN HOME
       </div>
 
     </form>

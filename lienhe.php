@@ -58,4 +58,7 @@ if(isset($_POST['send'])){
 
 </div>
 
-<?php include "inc/footer.php"; ?>
+
+
+<script src="assets/js/search.js"></script>
+<?php include "inc/footer_new.php"; ?>

@@ -1,0 +1,51 @@
+.success-container {
+    max-width: 600px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.success-icon {
+    font-size: 60px;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.success-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.success-text {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.success-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-home {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-continue {
+    background: #ff6600;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-home:hover { background: #0056b3; }
+.btn-continue:hover { background: #e65c00; }

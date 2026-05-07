@@ -16,5 +16,4 @@ $artisans = $conn->query("SELECT * FROM artisans")->fetchAll();
     </div>
 <?php endforeach; ?>
 </div>
-
-<?php include "inc/footer.php"; ?>
+<?php include "inc/footer_new.php"; ?>

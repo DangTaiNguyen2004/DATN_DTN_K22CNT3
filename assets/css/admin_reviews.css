@@ -1,0 +1,63 @@
+.admin-review-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.admin-review-card {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.admin-review-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-review-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.admin-review-stars {
+    color: #f39c12;
+    margin: 5px 0;
+}
+
+.admin-review-comment {
+    margin: 10px 0;
+}
+
+.admin-reply-box textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.admin-reply-box button {
+    margin-top: 5px;
+    padding: 6px 12px;
+    background: #f39c12;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-reply-box button:hover {
+    background: #e67e22;
+}
+
+.admin-replied {
+    background: #f1f1f1;
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 4px solid #f39c12;
+    border-radius: 5px;
+}

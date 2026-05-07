@@ -1,4 +1,4 @@
-</div>
+
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -10,7 +10,7 @@ $company = $conn->query("SELECT * FROM company_info LIMIT 1")->fetch();
 ?>
 
 
-<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="/noithat_ngocquangggg/assets/css/footer.css">
 <footer>
     <div class="footer-content">
       <div class="info">
@@ -42,7 +42,7 @@ $company = $conn->query("SELECT * FROM company_info LIMIT 1")->fetch();
       </div>
     </div>
     <div class="copyright">
-      © Bản quyền thuộc về Hoàng Hoan | Thiết kế bởi Sinh viên CNTT
+      © Bản quyền thuộc về DTN HOME | Thiết kế bởi Sinh viên CNTT
     </div>
   </footer>
 </body>

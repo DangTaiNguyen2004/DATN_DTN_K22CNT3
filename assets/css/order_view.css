@@ -96,3 +96,14 @@ body {
 .back-btn:hover {
     background: #000;
 }
+.status{
+    padding:5px 10px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.status.pending{background:#eee;color:#555;}
+.status.processing{background:#fff3cd;color:#856404;}
+.status.shipping{background:#cce5ff;color:#004085;}
+.status.completed{background:#28a745;color:#fff;}

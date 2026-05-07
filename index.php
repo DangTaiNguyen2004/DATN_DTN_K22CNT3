@@ -30,6 +30,7 @@ $cats = $conn->query("SELECT * FROM categories")->fetchAll();
 <link rel="stylesheet" href="assets/css/categories.css">
 <link rel="stylesheet" href="assets/css/wrapper.css">
 <link rel="stylesheet" href="assets/css/doitac.css">
+<center><h1>WELCOM TO DTN HOME</h1></center>
 <form action="search.php" method="GET" class="search-form">
     <div class="search-box">
         <input 
@@ -57,7 +58,15 @@ $cats = $conn->query("SELECT * FROM categories")->fetchAll();
             </div>
         </marquee>
     </div>
-    
+<div class="rotating-text">
+    <span class="text">DTN HOME</span>
+
+    <div class="words">
+        <span class="word">Chất lượng uy tín</span>
+        <span class="word">Chất liệu cao cấp hiện đại</span>
+        <span class="word">Phù hợp với mọi nhà</span>
+    </div>
+</div>
     <h2>DANH MỤC SẢN PHẨM</h2>
 <section class="categories">
 <?php foreach($cats as $c): ?>
